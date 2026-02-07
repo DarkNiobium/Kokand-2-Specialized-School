@@ -4,7 +4,7 @@ import entranceImage from '../../assets/school pictures/entrance.jpg';
 
 const Hero = () => {
   return (
-    <div className="relative h-[520px] md:h-[600px] flex items-center justify-center overflow-hidden">
+    <div className="relative h-[460px] md:h-[600px] flex items-start justify-center overflow-hidden pt-8 md:pt-12">
       <div
         className="absolute inset-0 z-0 bg-cover bg-center"
         style={{
@@ -12,8 +12,8 @@ const Hero = () => {
             `url(${entranceImage})`
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/75 to-blue-50/90"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(37,99,235,0.18),_transparent_55%)]"></div>
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/90 via-white/75 to-blue-50/90"></div>
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(37,99,235,0.18),_transparent_55%)]"></div>
       </div>
       <div className="container mx-auto px-4 relative z-10 text-center">
         <h1 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-blue-900 mb-4 leading-snug drop-shadow-sm max-w-3xl mx-auto">
