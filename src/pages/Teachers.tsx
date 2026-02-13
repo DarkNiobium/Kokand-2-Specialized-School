@@ -24,20 +24,20 @@ const Teachers = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
           <h1 className="text-2xl md:text-3xl font-bold text-gray-900">O'qituvchilar</h1>
-          <div className="flex flex-col md:flex-row gap-3">
+          <div className="flex flex-col md:flex-row gap-3 w-full md:w-auto">
             <div className="relative">
               <Search size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
               <input
                 value={query}
                 onChange={e => setQuery(e.target.value)}
                 placeholder="Ism yoki fan"
-                className="pl-9 pr-3 py-2 rounded-md border border-gray-300 outline-none focus:ring-2 focus:ring-blue-600"
+                className="pl-9 pr-3 py-2 rounded-md border border-gray-300 outline-none focus:ring-2 focus:ring-blue-600 w-full md:w-64"
               />
             </div>
             <select
               value={subject}
               onChange={e => setSubject(e.target.value)}
-              className="px-3 py-2 rounded-md border border-gray-300 outline-none focus:ring-2 focus:ring-blue-600"
+              className="px-3 py-2 rounded-md border border-gray-300 outline-none focus:ring-2 focus:ring-blue-600 w-full md:w-48"
             >
               <option>Hammasi</option>
               {subjects.map(s => (
@@ -58,10 +58,10 @@ const Teachers = () => {
                 <span className="text-xs px-2 py-1 rounded-full bg-blue-50 text-blue-700">{t.subject}</span>
               </div>
               <div className="mt-4 text-sm text-gray-700">
-                <p className="flex items-center gap-2">
+                <p className="flex items-center gap-2 break-words">
                   <Phone size={16} className="text-blue-700" /> {t.phone || '—'}
                 </p>
-                <p className="mt-1 text-gray-500">{t.education}</p>
+                <p className="mt-1 text-gray-500 break-words">{t.education}</p>
               </div>
             </div>
           ))}

@@ -14,9 +14,9 @@ const Navbar = () => {
             <div className="h-12 w-12 rounded-full bg-white border border-white/60 shadow-sm flex items-center justify-center overflow-hidden">
               <img src={logoImage} alt="Agentlik logotipi" className="h-full w-full object-cover" />
             </div>
-            <div className="text-sm leading-tight">
-              <p className="text-blue-900 font-semibold uppercase tracking-wide text-xs sm:text-sm">Ixtisoslashtirilgan ta'lim muassasalari agentligi</p>
-              <p className="text-gray-600 text-[11px] sm:text-xs">Qo'qon shahar 2-son ixtisoslashtirilgan maktab</p>
+            <div className="text-sm leading-tight min-w-0">
+              <p className="text-blue-900 font-semibold uppercase tracking-wide text-xs sm:text-sm break-words">Ixtisoslashtirilgan ta'lim muassasalari agentligi</p>
+              <p className="text-gray-600 text-[11px] sm:text-xs break-words">Qo'qon shahar 2-son ixtisoslashtirilgan maktab</p>
             </div>
           </div>
           <div className="flex items-center justify-between lg:justify-end gap-6 text-sm">
@@ -56,7 +56,7 @@ const Navbar = () => {
                 </NavLink>
               ))}
             </nav>
-            <div className="md:hidden text-white font-semibold">kokand2piima.uz</div>
+            <div className="md:hidden text-white font-semibold text-sm break-words">kokand2piima.uz</div>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="md:hidden text-white hover:text-blue-200"

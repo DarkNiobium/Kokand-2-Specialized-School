@@ -22,7 +22,7 @@ const Home = () => {
     },
     {
       question: "Maktab soatlari qanday?",
-      answer: "Darslar dushanbadan jumagacha 8:00 dan 16:00 gacha bo‘lib o‘tadi."
+      answer: "Darslar dushanbadan jumagacha 8:30 dan 16:00 gacha bo‘lib o‘tadi."
     },
     {
       question: "Ota-onalar uchun uchrashuvlar qachon bo‘ladi?",
@@ -68,10 +68,10 @@ const Home = () => {
                     <button
                       type="button"
                       onClick={() => setOpenIndex(isOpen ? -1 : idx)}
-                      className="w-full flex items-center justify-between px-5 py-4 text-left text-sm font-semibold text-gray-900"
+                      className="w-full flex items-start justify-between gap-3 px-5 py-4 text-left text-sm font-semibold text-gray-900"
                     >
-                      <span>{item.question}</span>
-                      <ArrowUpRight size={18} className={`transition-transform ${isOpen ? "rotate-90 text-blue-700" : "text-gray-400"}`} />
+                      <span className="min-w-0 break-words">{item.question}</span>
+                      <ArrowUpRight size={18} className={`shrink-0 transition-transform ${isOpen ? "rotate-90 text-blue-700" : "text-gray-400"}`} />
                     </button>
                     {isOpen && (
                       <div className="px-5 pb-4 text-sm text-gray-600 leading-relaxed">

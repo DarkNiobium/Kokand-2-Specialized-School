@@ -7,7 +7,7 @@ const NewsSection = () => {
   return (
     <section id="news" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between mb-8">
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
           <div>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900">So'nggi yangiliklar</h2>
             <p className="text-sm text-gray-600 mt-2">Yangiliklar va e'lonlar bilan doimiy xabardor bo'ling</p>
@@ -34,10 +34,10 @@ const NewsSection = () => {
                     {item.date}
                   </span>
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3 break-words">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 mb-4 text-sm flex-1">
+                <p className="text-gray-600 mb-4 text-sm flex-1 break-words">
                   {item.excerpt}
                 </p>
                 <button className="inline-flex items-center text-blue-700 font-semibold mt-auto gap-2">

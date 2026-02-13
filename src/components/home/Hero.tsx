@@ -1,10 +1,10 @@
 import React from 'react';
-import { ArrowRight, Sparkles, GraduationCap, Monitor, ShieldCheck } from 'lucide-react';
+import { ArrowRight, GraduationCap, Monitor, ShieldCheck } from 'lucide-react';
 import entranceImage from '../../assets/school pictures/entrance.jpg';
 
 const Hero = () => {
   return (
-    <div className="relative h-[460px] md:h-[600px] flex items-start justify-center overflow-hidden pt-8 md:pt-12">
+    <div className="relative min-h-[460px] md:min-h-[600px] flex items-start justify-center overflow-hidden pt-8 md:pt-12 pb-10">
       <div
         className="absolute inset-0 z-0 bg-cover bg-center"
         style={{
@@ -16,12 +16,12 @@ const Hero = () => {
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(37,99,235,0.18),_transparent_55%)]"></div>
       </div>
       <div className="container mx-auto px-4 relative z-10 text-center">
-        <h1 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-blue-900 mb-4 leading-snug drop-shadow-sm max-w-3xl mx-auto">
+        <h1 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-blue-900 mb-4 leading-snug drop-shadow-sm max-w-3xl mx-auto break-words">
           Ixtisoslashtirilgan ta’lim muassasalari agentligi tizimidagi
           <br />
           Qo'qon shahar 2-son ixtisoslashtirilgan maktab
         </h1>
-        <p className="text-gray-700 max-w-2xl mx-auto mb-8 text-sm sm:text-base">
+        <p className="text-gray-700 max-w-2xl mx-auto mb-8 text-sm sm:text-base break-words">
           Sifatli ta'lim va professional o'qituvchilar bilan bolalaringizning kelajagini yarating
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3">

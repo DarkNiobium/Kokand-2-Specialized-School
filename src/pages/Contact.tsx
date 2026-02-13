@@ -12,19 +12,19 @@ const Contact = () => {
           <div className="bg-white rounded-xl shadow border border-gray-100 p-6">
             <h2 className="text-xl font-semibold text-gray-900 mb-4">Aloqa ma'lumotlari</h2>
             <div className="space-y-4 text-sm text-gray-700">
-              <p className="flex items-start gap-3">
+              <p className="flex items-start gap-3 break-words">
                 <MapPin size={18} className="text-blue-700 mt-0.5" />
                 {contactInfo.address}
               </p>
-              <p className="flex items-center gap-3">
+              <p className="flex items-center gap-3 break-words">
                 <Phone size={18} className="text-blue-700" />
                 {contactInfo.phone}
               </p>
-              <p className="flex items-center gap-3">
+              <p className="flex items-center gap-3 break-words">
                 <Mail size={18} className="text-blue-700" />
                 {contactInfo.email}
               </p>
-              <p className="flex items-center gap-3">
+              <p className="flex items-center gap-3 break-words">
                 <Mail size={18} className="text-blue-700" />
                 {contactInfo.extraEmail}
               </p>

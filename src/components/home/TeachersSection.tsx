@@ -6,7 +6,7 @@ const TeachersSection = () => {
   return (
     <section id="teachers" className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between mb-8">
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
           <div>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Rahbariyat</h2>
             <p className="text-sm text-gray-600 mt-2">Maktab boshqaruv jamoasi bilan tanishing</p>
@@ -26,7 +26,7 @@ const TeachersSection = () => {
                   <p className="text-blue-700 text-sm mt-1">{person.role}</p>
                 </div>
               </div>
-              <div className="mt-4 text-sm text-gray-600">
+              <div className="mt-4 text-sm text-gray-600 break-words">
                 {person.phone}
               </div>
             </div>

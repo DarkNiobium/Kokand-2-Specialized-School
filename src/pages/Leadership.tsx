@@ -21,12 +21,12 @@ const Leadership = () => {
               </div>
               <div className="mt-4 space-y-2 text-sm">
                 {person.phone && (
-                  <p className="flex items-center gap-2 text-gray-700">
+                  <p className="flex items-center gap-2 text-gray-700 break-words">
                     <Phone size={16} className="text-blue-700" /> {person.phone}
                   </p>
                 )}
                 {person.email && (
-                  <p className="flex items-center gap-2 text-gray-700">
+                  <p className="flex items-center gap-2 text-gray-700 break-words">
                     <Mail size={16} className="text-blue-700" /> {person.email}
                   </p>
                 )}

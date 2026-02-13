@@ -15,7 +15,7 @@ const Footer = () => {
               </div>
               <h3 className="text-xl font-bold">Qo'qon 2-IM</h3>
             </div>
-            <p className="text-gray-400 mb-6 max-w-sm">
+            <p className="text-gray-400 mb-6 max-w-sm break-words">
               Ixtisoslashtirilgan taʼlim muassasalari agentligi tizimidagi Qo'qon shahar 2-ixtisoslashtirilgan maktab.
               Sifatli ta'lim - porloq kelajak garovidir.
             </p>
@@ -51,15 +51,15 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start space-x-3 text-gray-400">
                 <MapPin className="flex-shrink-0 text-blue-500" size={20} />
-                <span>Oʻzbekiston Respublikasi, Fargʻona viloyati, Qoʻqon shahri</span>
+                <span className="break-words">Oʻzbekiston Respublikasi, Fargʻona viloyati, Qoʻqon shahri</span>
               </li>
               <li className="flex items-center space-x-3 text-gray-400">
                 <Phone className="flex-shrink-0 text-blue-500" size={20} />
-                <span>+998 (55) 803 17 82</span>
+                <span className="break-words">+998 (55) 803 17 82</span>
               </li>
               <li className="flex items-center space-x-3 text-gray-400">
                 <Mail className="flex-shrink-0 text-blue-500" size={20} />
-                <span>info@kokand2piima.uz</span>
+                <span className="break-words">info@kokand2piima.uz</span>
               </li>
             </ul>
           </div>

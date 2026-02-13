@@ -140,7 +140,7 @@ export const galleryImages = [/*
 
 export const contactInfo = {
   address: "Oʻzbekiston Respublikasi, Fargʻona viloyati, Qoʻqon shahri",
-  phone: "+998 (55) 803 17 82",
+  phone: "+998 90 570 28 02",
   email: "info@kokand2piima.uz",
   extraEmail: "info@kokand2piima.uz"
 };
