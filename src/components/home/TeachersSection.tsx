@@ -1,17 +1,19 @@
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { leadership } from '../../data/siteData';
+import { useLanguage } from '../../i18n';
 
 const TeachersSection = () => {
+  const { t } = useLanguage();
   return (
     <section id="teachers" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
           <div>
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Rahbariyat</h2>
-            <p className="text-sm text-gray-600 mt-2">Maktab boshqaruv jamoasi bilan tanishing</p>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">{t.leadership.title}</h2>
+            <p className="text-sm text-gray-600 mt-2">{t.leadership.subtitle}</p>
           </div>
-          <a href="/leadership" className="text-sm font-semibold text-blue-700 inline-flex items-center gap-2">Barchasi <ArrowUpRight size={16} /></a>
+          <a href="/leadership" className="text-sm font-semibold text-blue-700 inline-flex items-center gap-2">{t.leadership.viewAll} <ArrowUpRight size={16} /></a>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

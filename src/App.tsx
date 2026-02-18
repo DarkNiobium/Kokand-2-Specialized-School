@@ -8,25 +8,28 @@ import Teachers from './pages/Teachers';
 import News from './pages/News';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
+import { LanguageProvider } from './i18n';
 
 function App() {
   return (
-    <Router>
-      <div className="min-h-screen flex flex-col font-sans text-gray-900 bg-white">
-        <Navbar />
-        <div className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/leadership" element={<Leadership />} />
-            <Route path="/teachers" element={<Teachers />} />
-            <Route path="/news" element={<News />} />
-            <Route path="/gallery" element={<Gallery />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
+    <LanguageProvider>
+      <Router>
+        <div className="min-h-screen flex flex-col font-sans text-gray-900 bg-white">
+          <Navbar />
+          <div className="flex-grow">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/leadership" element={<Leadership />} />
+              <Route path="/teachers" element={<Teachers />} />
+              <Route path="/news" element={<News />} />
+              <Route path="/gallery" element={<Gallery />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </div>
+          <Footer />
         </div>
-        <Footer />
-      </div>
-    </Router>
+      </Router>
+    </LanguageProvider>
   );
 }
 

@@ -1,28 +1,30 @@
 import React from 'react';
 import { Users, BookOpen, Trophy } from 'lucide-react';
-
-const stats = [
-  {
-    icon: <Users size={40} />,
-    value: '400+',
-    label: "O'quvchilar",
-    color: 'text-blue-700'
-  },
-  {
-    icon: <BookOpen size={40} />,
-    value: '45+',
-    label: "O'qituvchilar",
-    color: 'text-blue-700'
-  },
-  {
-    icon: <Trophy size={40} />,
-    value: '25+',
-    label: 'Yutuqlar',
-    color: 'text-blue-700'
-  }
-];
+import { useLanguage } from '../../i18n';
 
 const Stats = () => {
+  const { t } = useLanguage();
+  const stats = [
+    {
+      icon: <Users size={40} />,
+      value: '400+',
+      label: t.stats.students,
+      color: 'text-blue-700'
+    },
+    {
+      icon: <BookOpen size={40} />,
+      value: '45+',
+      label: t.stats.teachers,
+      color: 'text-blue-700'
+    },
+    {
+      icon: <Trophy size={40} />,
+      value: '25+',
+      label: t.stats.achievements,
+      color: 'text-blue-700'
+    }
+  ];
+
   return (
     <section className="py-10 bg-white relative -mt-12 z-20">
       <div className="container mx-auto px-4">

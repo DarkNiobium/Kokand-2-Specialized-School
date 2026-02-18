@@ -1,12 +1,15 @@
 import React, { useMemo, useState } from 'react';
 import { Search, Phone } from 'lucide-react';
 import { teachers as teachersData } from '../data/siteData';
+import { useLanguage } from '../i18n';
 
 const subjects = Array.from(new Set(teachersData.map(t => t.subject)));
 
 const Teachers = () => {
+  const { t } = useLanguage();
+  const allSubjectKey = 'all';
   const [query, setQuery] = useState('');
-  const [subject, setSubject] = useState<string>('Hammasi');
+  const [subject, setSubject] = useState<string>(allSubjectKey);
 
   const filtered = useMemo(() => {
     return teachersData.filter(t => {
@@ -14,7 +17,7 @@ const Teachers = () => {
         t.name.toLowerCase().includes(query.toLowerCase()) ||
         t.role.toLowerCase().includes(query.toLowerCase()) ||
         t.subject.toLowerCase().includes(query.toLowerCase());
-      const matchesSubject = subject === 'Hammasi' ? true : t.subject === subject;
+      const matchesSubject = subject === allSubjectKey ? true : t.subject === subject;
       return matchesQuery && matchesSubject;
     });
   }, [query, subject]);
@@ -23,14 +26,14 @@ const Teachers = () => {
     <main className="py-12">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
-          <h1 className="text-2xl md:text-3xl font-bold text-gray-900">O'qituvchilar</h1>
+          <h1 className="text-2xl md:text-3xl font-bold text-gray-900">{t.teachersPage.title}</h1>
           <div className="flex flex-col md:flex-row gap-3 w-full md:w-auto">
             <div className="relative">
               <Search size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
               <input
                 value={query}
                 onChange={e => setQuery(e.target.value)}
-                placeholder="Ism yoki fan"
+                placeholder={t.teachersPage.searchPlaceholder}
                 className="pl-9 pr-3 py-2 rounded-md border border-gray-300 outline-none focus:ring-2 focus:ring-blue-600 w-full md:w-64"
               />
             </div>
@@ -39,9 +42,9 @@ const Teachers = () => {
               onChange={e => setSubject(e.target.value)}
               className="px-3 py-2 rounded-md border border-gray-300 outline-none focus:ring-2 focus:ring-blue-600 w-full md:w-48"
             >
-              <option>Hammasi</option>
+              <option value={allSubjectKey}>{t.teachersPage.allSubjects}</option>
               {subjects.map(s => (
-                <option key={s}>{s}</option>
+                <option key={s} value={s}>{s}</option>
               ))}
             </select>
           </div>

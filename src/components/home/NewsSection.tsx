@@ -2,18 +2,20 @@ import React from 'react';
 import { Calendar, ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { newsItems } from '../../data/siteData';
+import { useLanguage } from '../../i18n';
 
 const NewsSection = () => {
+  const { t } = useLanguage();
   return (
     <section id="news" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
           <div>
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">So'nggi yangiliklar</h2>
-            <p className="text-sm text-gray-600 mt-2">Yangiliklar va e'lonlar bilan doimiy xabardor bo'ling</p>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">{t.news.title}</h2>
+            <p className="text-sm text-gray-600 mt-2">{t.news.subtitle}</p>
           </div>
           <Link to="/news" className="text-sm font-semibold text-blue-700 inline-flex items-center gap-2">
-            Barchasini ko'rish <ArrowUpRight size={16} />
+            {t.news.viewAll} <ArrowUpRight size={16} />
           </Link>
         </div>
 
@@ -41,7 +43,7 @@ const NewsSection = () => {
                   {item.excerpt}
                 </p>
                 <button className="inline-flex items-center text-blue-700 font-semibold mt-auto gap-2">
-                  Batafsil <ArrowUpRight size={16} />
+                  {t.news.more} <ArrowUpRight size={16} />
                 </button>
               </div>
             </div>
