@@ -76,10 +76,10 @@ const Navbar = () => {
             <img src={logoImage} alt={t.nav.agency} className="h-full w-full object-cover" />
           </div>
           <div className="text-left leading-tight min-w-0">
-            <h1 className="text-brand-dark font-bold text-xs sm:text-[13px] tracking-wide uppercase truncate max-w-[280px] sm:max-w-md">
+            <h1 className="text-brand-dark font-bold text-[10px] min-[380px]:text-xs sm:text-[13px] tracking-wide uppercase truncate max-w-[120px] min-[380px]:max-w-[180px] sm:max-w-[280px] md:max-w-md">
               {t.nav.agency}
             </h1>
-            <p className="text-gray-500 text-[10px] sm:text-[11px] truncate max-w-[280px] sm:max-w-md">
+            <p className="text-gray-500 text-[9px] min-[380px]:text-[10px] sm:text-[11px] truncate max-w-[120px] min-[380px]:max-w-[180px] sm:max-w-[280px] md:max-w-md">
               {t.nav.school}
             </p>
           </div>
