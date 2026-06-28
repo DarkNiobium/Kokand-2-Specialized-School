@@ -6,10 +6,22 @@ import studentsImg from '../assets/school pictures/students.png';
 
 export const leadership = [
   {
-    name: "Parpiyeva Mastura Mubashirovna",
+    name: "Mashxura Alimovna",
+    role: "Maktab direktori",
+    phone: "",
+    email: ""
+  },
+  {
+    name: "Parpiyeva Mastura",
     role: "Oʻquv ishlari boʻyicha direktor oʻrinbosari (Zavuch)",
+    phone: "",
+    email: ""
+  },
+  {
+    name: "Inomjon Fayzullayev",
+    role: "Maktab maslahatchisi (Konsultant)",
     phone: "+998 90 570 28 02",
-    email: "ixm277@piima.uz"
+    email: "info@qoqon2im.uz"
   }
 ];
 
@@ -404,29 +416,29 @@ export const teachers = [
 export const newsItems = [
   {
     id: 1,
-    title: "Umumta'lim fanlaridan 2025-yilning 2-yarmida bo‘lib o‘tadigan milliy sertifikat imtihonlari",
-    date: "2025-08-20",
+    title: "Umumta'lim fanlaridan 2026-yilning 2-yarmida bo‘lib o‘tadigan milliy sertifikat imtihonlari",
+    date: "2026-06-25",
     excerpt: "Umumta'lim fanlaridan milliy sertifikat imtihonlari oktabr, noyabr va dekabr oylarida o‘tkaziladi.",
     image: classroomImg
   },
   {
     id: 2,
     title: "Dunyoning yetakchi universitetlarida tahsil olish uchun 200 ta davlat granti",
-    date: "2025-08-20",
+    date: "2026-06-22",
     excerpt: "“Prezident iqtidorli farzandlari” tashabbusi doirasida dunyo reytingidagi kuchli 100 talikda o‘qish imkoniyati.",
     image: studentsImg
   },
   {
     id: 3,
     title: "Prezident iqtidorli farzandlari milliy dasturi imtihonlari",
-    date: "2025-08-11",
+    date: "2026-06-18",
     excerpt: "Milliy dastur imtihonlari respublika bo‘ylab bo‘lib o‘tmoqda.",
     image: chemistryImg
   },
   {
     id: 4,
     title: "Stenford universitetining bakalavriat talabalariga moliyaviy yordam dasturi",
-    date: "2025-08-06",
+    date: "2026-06-10",
     excerpt: "Stenford universiteti bakalavriat kurslari uchun moliyaviy yordam shartlari e’lon qilindi.",
     image: roboticsImg
   }

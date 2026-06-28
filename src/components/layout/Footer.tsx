@@ -75,11 +75,11 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-3 text-gray-400">
                 <Phone className="flex-shrink-0 text-brand-gold" size={18} />
-                <a href="tel:+998558031782" className="hover:text-white transition-colors">+998 (55) 803 17 82</a>
+                <a href="tel:+998905702802" className="hover:text-white transition-colors">+998 (90) 570 28 02</a>
               </li>
               <li className="flex items-center space-x-3 text-gray-400">
                 <Mail className="flex-shrink-0 text-brand-gold" size={18} />
-                <a href="mailto:info@kokand2piima.uz" className="hover:text-white transition-colors">info@kokand2piima.uz</a>
+                <a href="mailto:info@qoqon2im.uz" className="hover:text-white transition-colors">info@qoqon2im.uz</a>
               </li>
             </ul>
           </div>

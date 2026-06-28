@@ -18,7 +18,7 @@ const Stats = () => {
     },
     {
       icon: <Trophy size={24} />,
-      value: '25+',
+      value: '100+',
       label: t.stats.achievements,
     },
   ];
