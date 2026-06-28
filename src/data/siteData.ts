@@ -21,7 +21,7 @@ export const leadership = [
     name: "Inomjon Fayzullayev",
     role: "Maktab maslahatchisi (Konsultant)",
     phone: "+998 90 570 28 02",
-    email: "info@qoqon2im.uz"
+    email: "info@kokand2piima.uz"
   }
 ];
 
@@ -454,8 +454,8 @@ export const galleryImages = [
 export const contactInfo = {
   address: "Oʻzbekiston Respublikasi, Fargʻona viloyati, Qoʻqon shahri, Bogʻiston ko'chasi, 2A-uy",
   phone: "+998 90 570 28 02",
-  email: "info@qoqon2im.uz",
-  extraEmail: "info@qoqon2im.uz"
+  email: "info@kokand2piima.uz",
+  extraEmail: "info@kokand2piima.uz"
 };
 
 export const faqItems = [

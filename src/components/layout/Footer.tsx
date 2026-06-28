@@ -79,7 +79,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-3 text-gray-400">
                 <Mail className="flex-shrink-0 text-brand-gold" size={18} />
-                <a href="mailto:info@qoqon2im.uz" className="hover:text-white transition-colors">info@qoqon2im.uz</a>
+                <a href="mailto:info@kokand2piima.uz" className="hover:text-white transition-colors">info@kokand2piima.uz</a>
               </li>
             </ul>
           </div>

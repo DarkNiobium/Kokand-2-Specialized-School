@@ -58,9 +58,9 @@ const Navbar = () => {
               <Phone size={12} className="text-brand-gold" /> 
               <span>+998 (90) 570 28 02</span>
             </a>
-            <a href="mailto:info@qoqon2im.uz" className="flex items-center gap-1.5 hover:text-brand-gold transition-colors">
+            <a href="mailto:info@kokand2piima.uz" className="flex items-center gap-1.5 hover:text-brand-gold transition-colors">
               <Mail size={12} className="text-brand-gold" /> 
-              <span>info@qoqon2im.uz</span>
+              <span>info@kokand2piima.uz</span>
             </a>
           </div>
           <div className="text-[11px] font-semibold text-brand-gold uppercase tracking-wider">
@@ -180,9 +180,9 @@ const Navbar = () => {
                   <Phone size={14} className="text-brand-gold" />
                   <span>+998 (90) 570 28 02</span>
                 </a>
-                <a href="mailto:info@qoqon2im.uz" className="flex items-center gap-2 hover:text-brand-gold transition-colors">
+                <a href="mailto:info@kokand2piima.uz" className="flex items-center gap-2 hover:text-brand-gold transition-colors">
                   <Mail size={14} className="text-brand-gold" />
-                  <span>info@qoqon2im.uz</span>
+                  <span>info@kokand2piima.uz</span>
                 </a>
               </div>
             </div>
