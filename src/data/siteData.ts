@@ -1,4 +1,4 @@
-export const leadership = [/*
+export const leadership = [
   {
     name: "Kamolov Otabek No'monjonivich",
     role: "Maktab direktori",
@@ -34,10 +34,10 @@ export const leadership = [/*
     role: "Bosh buxgalter",
     phone: "+998 (93) 371 91 93",
     email: ""
-  }*/
+  }
 ];
 
-export const teachers = [/*
+export const teachers = [
   { name: "Jurayev Kenjaboy", role: "Matematika o'qituvchisi", subject: "Matematika", phone: "+998 998 545 136", education: "KDTI 2003" },
   { name: "Umarova Munira", role: "Matematika o'qituvchisi", subject: "Matematika", phone: "+998 911 396 270", education: "KDTI 2015" },
   { name: "Qushakov Nuriddin", role: "Matematika o'qituvchisi", subject: "Matematika", phone: "+998 999 961 932", education: "KDTI 2007" },
@@ -80,9 +80,9 @@ export const teachers = [/*
   { name: "Tojiyeva Adiba", role: "Tarix o'qituvchisi", subject: "Tarix", phone: "+998 941 799 111", education: "FDU 2009" },
   { name: "Mexmonova Saboxon", role: "Tarix o'qituvchisi", subject: "Tarix", phone: "+998 971 256 328", education: "FDU 2005" },
   { name: "Yigitaliyeva Maloxatoy", role: "Tarix o'qituvchisi", subject: "Tarix", phone: "+998 945 426 407", education: "FDU 2005" }
-*/];
+];
 
-export const newsItems = [/*
+export const newsItems = [
   {
     id: 1,
     title: "Umumta'lim fanlaridan 2025-yilning 2-yarmida bo‘lib o‘tadigan milliy sertifikat imtihonlari",
@@ -124,10 +124,10 @@ export const newsItems = [/*
     date: "2025-08-02",
     excerpt: "“Prezident iqtidorli farzandlari” Milliy dasturiga qabul 31-iyul kuni yakunlandi.",
     image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80"
-  }*/
+  }
 ];
 
-export const galleryImages = [/*
+export const galleryImages = [
   "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
   "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80",
   "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=80",
@@ -135,7 +135,7 @@ export const galleryImages = [/*
   "https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=1200&q=80",
   "https://images.unsplash.com/photo-1519452632535-eda4a2596adb?auto=format&fit=crop&w=1200&q=80",
   "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80",
-  "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80"*/
+  "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80"
 ];
 
 export const contactInfo = {
