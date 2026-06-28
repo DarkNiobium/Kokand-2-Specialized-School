@@ -1,35 +1,105 @@
 import React from 'react';
-import { Calendar } from 'lucide-react';
+import { Calendar, ArrowUpRight } from 'lucide-react';
+import { motion, Variants } from 'framer-motion';
 import { newsItems } from '../data/siteData';
 import { useLanguage } from '../i18n';
+import SEO from '../components/SEO';
 
 const News = () => {
   const { t } = useLanguage();
+
+  const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      }
+    }
+  };
+
+  const itemVariants: Variants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { type: "spring", stiffness: 80, damping: 15 }
+    }
+  };
+
   return (
-    <main className="py-12">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
-          <h1 className="text-2xl md:text-3xl font-bold text-gray-900">{t.newsPage.title}</h1>
-          <span className="text-sm text-gray-500">{t.newsPage.subtitle}</span>
+    <main className="py-20 bg-[#FAFBFD] relative overflow-hidden min-h-screen">
+      {/* Background decoration */}
+      <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-brand-gold/5 rounded-full blur-[120px] pointer-events-none" />
+
+      <SEO 
+        title={t.newsPage.title}
+        description="Qo'qon shahar 2-son ixtisoslashtirilgan maktabi yangiliklari, e'lonlari va tadbirlari."
+      />
+
+      <div className="container mx-auto px-4 lg:px-6 relative z-10">
+        {/* Title */}
+        <div className="text-left space-y-2 mb-12 border-b border-gray-100 pb-8">
+          <div className="text-brand-gold font-bold text-xs uppercase tracking-widest">
+            {t.nav.news}
+          </div>
+          <h1 className="text-3xl font-extrabold text-brand-dark tracking-tight">
+            {t.newsPage.title}
+          </h1>
+          <p className="text-sm text-gray-500 max-w-xl">
+            {t.newsPage.subtitle}
+          </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {newsItems.map(item => (
-            <article key={item.id} className="bg-white rounded-xl shadow border border-gray-100 overflow-hidden">
-              <div className="h-48 overflow-hidden">
-                <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
+
+        {/* News Grid */}
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          {newsItems.map((item) => (
+            <motion.article 
+              key={item.id} 
+              className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-premium border border-gray-100/80 flex flex-col h-full transition-all duration-500 hover:border-brand-gold/30 hover:-translate-y-1"
+              variants={itemVariants}
+            >
+              {/* Image with zoom effect */}
+              <div className="h-56 overflow-hidden relative">
+                <img 
+                  src={item.image} 
+                  alt={item.title} 
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/10 to-transparent pointer-events-none" />
               </div>
-              <div className="p-5">
-                <div className="flex items-center text-sm text-blue-700 gap-2">
-                  <Calendar size={16} />
-                  <span>{item.date}</span>
+
+              {/* Content */}
+              <div className="p-6 flex-1 flex flex-col justify-between text-left">
+                <div>
+                  <div className="flex items-center text-xs font-semibold text-brand-gold mb-4">
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-gold/10 px-3 py-1 border border-brand-gold/20">
+                      <Calendar size={12} />
+                      {item.date}
+                    </span>
+                  </div>
+                  <h2 className="text-lg font-bold text-brand-dark mb-3 line-clamp-2 leading-snug group-hover:text-brand-gold transition-colors duration-300">
+                    {item.title}
+                  </h2>
+                  <p className="text-gray-500 mb-6 text-sm line-clamp-3 leading-relaxed">
+                    {item.excerpt}
+                  </p>
                 </div>
-                <h2 className="mt-3 font-semibold text-gray-900 leading-snug break-words">{item.title}</h2>
-                <p className="mt-2 text-sm text-gray-600 break-words">{item.excerpt}</p>
-                <button className="mt-4 text-sm font-semibold text-blue-700">{t.newsPage.more}</button>
+
+                <button className="inline-flex items-center text-brand-navy hover:text-brand-gold font-bold text-xs uppercase tracking-wider gap-2 self-start transition-colors duration-300">
+                  <span>{t.newsPage.more}</span> 
+                  <ArrowUpRight size={14} className="transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
+                </button>
               </div>
-            </article>
+            </motion.article>
           ))}
-        </div>
+        </motion.div>
       </div>
     </main>
   );
