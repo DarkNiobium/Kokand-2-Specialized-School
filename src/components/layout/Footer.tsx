@@ -25,7 +25,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-3 pt-2">
               <a 
-                href="https://t.me/qoqon_piima" 
+                href="https://t.me/qoqon_shahar_2_son_IM" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="bg-white/5 border border-white/10 p-2.5 rounded-lg text-gray-400 hover:text-brand-dark hover:bg-brand-gold hover:border-brand-gold transition-all duration-300 transform hover:-translate-y-1"
@@ -34,7 +34,9 @@ const Footer = () => {
                 <Send size={18} />
               </a>
               <a 
-                href="#" 
+                href="https://www.instagram.com/qoqon_2im" 
+                target="_blank" 
+                rel="noopener noreferrer" 
                 className="bg-white/5 border border-white/10 p-2.5 rounded-lg text-gray-400 hover:text-brand-dark hover:bg-brand-gold hover:border-brand-gold transition-all duration-300 transform hover:-translate-y-1"
                 aria-label="Instagram"
               >

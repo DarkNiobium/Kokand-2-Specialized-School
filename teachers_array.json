@@ -1,19 +1,4 @@
-import entranceImg from '../assets/school pictures/entrance.jpg';
-import classroomImg from '../assets/school pictures/classroom.png';
-import roboticsImg from '../assets/school pictures/robotics.png';
-import chemistryImg from '../assets/school pictures/chemistry.png';
-import studentsImg from '../assets/school pictures/students.png';
-
-export const leadership = [
-  {
-    name: "Parpiyeva Mastura Mubashirovna",
-    role: "Oʻquv ishlari boʻyicha direktor oʻrinbosari (Zavuch)",
-    phone: "+998 90 570 28 02",
-    email: "ixm277@piima.uz"
-  }
-];
-
-export const teachers = [
+[
   {
     "name": "Abdug‘afforov Oybekjon Murodjon o‘g‘li",
     "role": "Ingliz tili (IELTS) o'qituvchisi",
@@ -358,21 +343,21 @@ export const teachers = [
     "education": ""
   },
   {
-    "name": "O‘ktamova Gulchehraxon Usmonjon qizi",
+    "name": "O‘Ktamova Gulchehraxon Usmonjon qizi",
     "role": "Matematika o'qituvchisi",
     "subject": "Matematika",
     "phone": "",
     "education": ""
   },
   {
-    "name": "G‘ulomov Erkin Umarjon o‘g‘li",
+    "name": "G‘Ulomov Erkin Umarjon o‘g‘li",
     "role": "Matematika o'qituvchisi",
     "subject": "Matematika",
     "phone": "",
     "education": ""
   },
   {
-    "name": "O‘rinova Muxayyo Baxromovna",
+    "name": "O‘Rinova Muxayyo Baxromovna",
     "role": "Ona tili va adabiyot o'qituvchisi",
     "subject": "Ona tili va adabiyot",
     "phone": "",
@@ -399,61 +384,4 @@ export const teachers = [
     "phone": "",
     "education": ""
   }
-];
-
-export const newsItems = [
-  {
-    id: 1,
-    title: "Umumta'lim fanlaridan 2025-yilning 2-yarmida bo‘lib o‘tadigan milliy sertifikat imtihonlari",
-    date: "2025-08-20",
-    excerpt: "Umumta'lim fanlaridan milliy sertifikat imtihonlari oktabr, noyabr va dekabr oylarida o‘tkaziladi.",
-    image: classroomImg
-  },
-  {
-    id: 2,
-    title: "Dunyoning yetakchi universitetlarida tahsil olish uchun 200 ta davlat granti",
-    date: "2025-08-20",
-    excerpt: "“Prezident iqtidorli farzandlari” tashabbusi doirasida dunyo reytingidagi kuchli 100 talikda o‘qish imkoniyati.",
-    image: studentsImg
-  },
-  {
-    id: 3,
-    title: "Prezident iqtidorli farzandlari milliy dasturi imtihonlari",
-    date: "2025-08-11",
-    excerpt: "Milliy dastur imtihonlari respublika bo‘ylab bo‘lib o‘tmoqda.",
-    image: chemistryImg
-  },
-  {
-    id: 4,
-    title: "Stenford universitetining bakalavriat talabalariga moliyaviy yordam dasturi",
-    date: "2025-08-06",
-    excerpt: "Stenford universiteti bakalavriat kurslari uchun moliyaviy yordam shartlari e’lon qilindi.",
-    image: roboticsImg
-  }
-];
-
-export const galleryImages = [
-  classroomImg,
-  roboticsImg,
-  chemistryImg,
-  studentsImg
-];
-
-export const contactInfo = {
-  address: "Oʻzbekiston Respublikasi, Fargʻona viloyati, Qoʻqon shahri, Bogʻiston ko'chasi, 2A-uy",
-  phone: "+998 90 570 28 02",
-  email: "info@qoqon2im.uz",
-  extraEmail: "info@qoqon2im.uz"
-};
-
-export const faqItems = [
-  "Maktab davlat tasarrufida hisoblanadi. Maktabga oʻqish mutlaqo bepul.",
-  "Aniq fanlar yoʻnalishiga 4-sinfni bitirib 5-sinfga oʻtayotgan oʻquvchilar imtihon asosida qabul qilinadi.",
-  "Tabiiy fanlar yoʻnalishiga 6-sinf bitirib 7-sinfga oʻtayotgan oʻquvchilar imtihon asosida qabul qilinadi.",
-  "Aniq fanlar yoʻnalishi uchun fanlar majmuasi: Matematika va Ingliz tili.",
-  "Tabiiy fanlar yoʻnalishi uchun fanlar majmuasi: Biologiya va Ingliz tili.",
-  "Imtihonlar har yili Iyul oyida oʻtkaziladi.",
-  "Imtihonlarga roʻyxatga olish Iyun oyida boʻlib oʻtadi.",
-  "Maktabda darslar Dushanbadan Jumagacha. Soat 8:30 dan 16:00 gacha boʻlib oʻtadi.",
-  "Maktabda har xil fan toʻgaraklari tashkil etilgan. Fan toʻgaraklari ham mutlaqo bepul."
-];
+]
