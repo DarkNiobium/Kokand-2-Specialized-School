@@ -10,6 +10,9 @@ import News from './pages/News';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import { LanguageProvider } from './i18n';
+import Maintenance from './pages/Maintenance';
+
+const isMaintenanceMode = true; // Toggle to false to launch the full website
 
 // Scroll restoration component
 function ScrollToTop() {
@@ -21,6 +24,16 @@ function ScrollToTop() {
 }
 
 function App() {
+  if (isMaintenanceMode) {
+    return (
+      <HelmetProvider>
+        <LanguageProvider>
+          <Maintenance />
+        </LanguageProvider>
+      </HelmetProvider>
+    );
+  }
+
   return (
     <HelmetProvider>
       <LanguageProvider>
