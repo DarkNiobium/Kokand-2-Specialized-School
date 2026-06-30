@@ -12,7 +12,8 @@ import Contact from './pages/Contact';
 import { LanguageProvider } from './i18n';
 import Maintenance from './pages/Maintenance';
 
-const isMaintenanceMode = true; // Toggle to false to launch the full website
+const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+const isMaintenanceMode = true && !isLocalhost; // Toggle to false to launch the full website globally
 
 // Scroll restoration component
 function ScrollToTop() {
