@@ -12,7 +12,7 @@ export const leadership = [
     email: ""
   },
   {
-    name: "Parpiyeva Mastura",
+    name: "Parpiyeva Masturaxon",
     role: "Oʻquv ishlari boʻyicha direktor oʻrinbosari (Zavuch)",
     phone: "",
     email: ""
@@ -49,8 +49,8 @@ export const teachers = [
   },
   {
     "name": "Abduraximova Shoxsanamxon Dilshodjon qizi",
-    "role": "Tarbiyaviy soat o'qituvchisi",
-    "subject": "Tarbiyaviy soat",
+    "role": "",
+    "subject": "",
     "phone": "",
     "education": ""
   },
@@ -105,8 +105,8 @@ export const teachers = [
   },
   {
     "name": "Akramova Iqbolxon Ro‘ziboy qizi",
-    "role": "Tarbiyaviy soat o'qituvchisi",
-    "subject": "Tarbiyaviy soat",
+    "role": "",
+    "subject": "",
     "phone": "",
     "education": ""
   },
@@ -140,8 +140,8 @@ export const teachers = [
   },
   {
     "name": "Usmonova Ziroatxon Burxonjon qizi",
-    "role": "Tarbiyaviy soat o'qituvchisi",
-    "subject": "Tarbiyaviy soat",
+    "role": "",
+    "subject": "",
     "phone": "",
     "education": ""
   },
@@ -273,8 +273,8 @@ export const teachers = [
   },
   {
     "name": "Axmedova Shaxodat Muratovna",
-    "role": "Tarbiyaviy soat o'qituvchisi",
-    "subject": "Tarbiyaviy soat",
+    "role": "",
+    "subject": "",
     "phone": "",
     "education": ""
   },
@@ -301,8 +301,8 @@ export const teachers = [
   },
   {
     "name": "Jamoliddinova Nafisaxon Yo‘ldashaliyevna",
-    "role": "Tarbiyaviy soat o'qituvchisi",
-    "subject": "Tarbiyaviy soat",
+    "role": "",
+    "subject": "",
     "phone": "",
     "education": ""
   },

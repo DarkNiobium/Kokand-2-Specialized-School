@@ -30,6 +30,7 @@ export const SEO: React.FC<SEOProps> = ({
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
+      <meta name="robots" content="noindex, nofollow" />
 
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={ogType} />
