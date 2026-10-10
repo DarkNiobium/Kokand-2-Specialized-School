@@ -1,8 +1,4 @@
 import entranceImg from '../assets/school pictures/entrance.jpg';
-import classroomImg from '../assets/school pictures/classroom.png';
-import roboticsImg from '../assets/school pictures/robotics.png';
-import chemistryImg from '../assets/school pictures/chemistry.png';
-import studentsImg from '../assets/school pictures/students.png';
 
 export const leadership = [
   {
@@ -419,36 +415,33 @@ export const newsItems = [
     title: "Umumta'lim fanlaridan 2026-yilning 2-yarmida bo‘lib o‘tadigan milliy sertifikat imtihonlari",
     date: "2026-06-25",
     excerpt: "Umumta'lim fanlaridan milliy sertifikat imtihonlari oktabr, noyabr va dekabr oylarida o‘tkaziladi.",
-    image: classroomImg
+    image: entranceImg
   },
   {
     id: 2,
     title: "Dunyoning yetakchi universitetlarida tahsil olish uchun 200 ta davlat granti",
     date: "2026-06-22",
     excerpt: "“Prezident iqtidorli farzandlari” tashabbusi doirasida dunyo reytingidagi kuchli 100 talikda o‘qish imkoniyati.",
-    image: studentsImg
+    image: entranceImg
   },
   {
     id: 3,
     title: "Prezident iqtidorli farzandlari milliy dasturi imtihonlari",
     date: "2026-06-18",
     excerpt: "Milliy dastur imtihonlari respublika bo‘ylab bo‘lib o‘tmoqda.",
-    image: chemistryImg
+    image: entranceImg
   },
   {
     id: 4,
     title: "Stenford universitetining bakalavriat talabalariga moliyaviy yordam dasturi",
     date: "2026-06-10",
     excerpt: "Stenford universiteti bakalavriat kurslari uchun moliyaviy yordam shartlari e’lon qilindi.",
-    image: roboticsImg
+    image: entranceImg
   }
 ];
 
 export const galleryImages = [
-  classroomImg,
-  roboticsImg,
-  chemistryImg,
-  studentsImg
+  entranceImg
 ];
 
 export const contactInfo = {

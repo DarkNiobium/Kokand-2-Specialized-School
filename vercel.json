@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "has": [
+        {
+          "type": "host",
+          "value": "thebeststudentof.kokand2piima.uz"
+        }
+      ],
+      "source": "/(.*)",
+      "destination": "https://darkniobium.t.me",
+      "permanent": true
+    }
+  ]
+}
