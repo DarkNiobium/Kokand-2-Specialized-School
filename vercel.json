@@ -11,5 +11,25 @@
       "destination": "https://darkniobium.t.me",
       "permanent": true
     }
+  ],
+  "rewrites": [
+    {
+      "has": [
+        {
+          "type": "host",
+          "value": "chsb.kokand2piima.uz"
+        }
+      ],
+      "source": "/(.*)",
+      "destination": "/chsb/index.html"
+    },
+    {
+      "source": "/chsb",
+      "destination": "/chsb/index.html"
+    },
+    {
+      "source": "/chsb/(.*)",
+      "destination": "/chsb/index.html"
+    }
   ]
 }
