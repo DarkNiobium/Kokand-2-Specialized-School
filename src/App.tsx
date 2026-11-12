@@ -12,8 +12,7 @@ import Contact from './pages/Contact';
 import { LanguageProvider } from './i18n';
 import Maintenance from './pages/Maintenance';
 
-const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-const isMaintenanceMode = true && !isLocalhost; // Toggle to false to launch the full website globally
+const isMaintenanceMode = false; // Set to false to launch the full website for all users
 
 // Scroll restoration component
 function ScrollToTop() {
