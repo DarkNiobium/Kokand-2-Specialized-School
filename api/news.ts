@@ -11,12 +11,12 @@ export interface NewsItem {
   telegramUrl: string;
 }
 
-export async function getTelegramNews(): Promise<NewsItem[]> {
+export async function getTelegramNews(maxPages = 10): Promise<NewsItem[]> {
   const channel = 'qoqon_shahar_2_son_IM';
   let curUrl = `https://t.me/s/${channel}`;
   let allHtml = '';
 
-  for (let page = 0; page < 3; page++) {
+  for (let page = 0; page < maxPages; page++) {
     try {
       const res = await fetch(curUrl, {
         headers: {
@@ -135,7 +135,7 @@ export default async function handler(req: any, res?: any) {
   // Node.js serverless signature
   if (res && typeof res.status === 'function') {
     try {
-      const data = await getTelegramNews();
+      const data = await getTelegramNews(10);
       res.setHeader('Content-Type', 'application/json');
       res.setHeader('Access-Control-Allow-Origin', '*');
       res.setHeader('Cache-Control', 'public, s-maxage=600, stale-while-revalidate=1200');
@@ -158,7 +158,7 @@ export default async function handler(req: any, res?: any) {
   }
 
   try {
-    const data = await getTelegramNews();
+    const data = await getTelegramNews(10);
     return new Response(
       JSON.stringify({ success: true, count: data.length, data }),
       {
