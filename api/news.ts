@@ -7,8 +7,9 @@ export interface NewsItem {
   title: string;
   date: string;
   excerpt: string;
+  fullText?: string;
   image: string | null;
-  telegramUrl: string;
+  telegramUrl?: string;
 }
 
 export async function getTelegramNews(maxPages = 10): Promise<NewsItem[]> {
@@ -109,6 +110,7 @@ export async function getTelegramNews(maxPages = 10): Promise<NewsItem[]> {
       title: title.slice(0, 140),
       date,
       excerpt: excerpt || title,
+      fullText: text || excerpt || title,
       image,
       telegramUrl: `https://t.me/${fullPostId}`,
     });

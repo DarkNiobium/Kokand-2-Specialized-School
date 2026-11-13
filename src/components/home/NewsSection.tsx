@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Calendar, ArrowUpRight, Send } from 'lucide-react';
+import { Calendar, ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion, Variants } from 'framer-motion';
 import { newsItems as initialNewsItems } from '../../data/siteData';
@@ -13,7 +13,6 @@ const NewsSection: React.FC = () => {
     initialNewsItems.slice(0, 3).map((item) => ({
       ...item,
       image: item.image || entranceImg,
-      telegramUrl: 'https://t.me/qoqon_shahar_2_son_IM',
     }))
   );
 
@@ -67,27 +66,16 @@ const NewsSection: React.FC = () => {
               {t.news.subtitle}
             </p>
           </div>
-          <div className="flex items-center gap-4 self-start sm:self-auto">
-            <a
-              href="https://t.me/qoqon_shahar_2_son_IM"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xs font-semibold text-[#2AABEE] hover:text-brand-navy inline-flex items-center gap-1.5 transition-colors duration-300 bg-sky-50 px-3 py-1.5 rounded-full border border-sky-100 hover:border-sky-300"
-            >
-              <Send size={12} className="text-[#2AABEE]" />
-              <span>Telegram kanal</span>
-            </a>
-            <Link
-              to="/news"
-              className="group text-sm font-bold text-brand-navy hover:text-brand-gold inline-flex items-center gap-2 transition-colors duration-300"
-            >
-              <span>{t.news.viewAll}</span>
-              <ArrowUpRight
-                size={16}
-                className="transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300"
-              />
-            </Link>
-          </div>
+          <Link
+            to="/news"
+            className="group text-sm font-bold text-brand-navy hover:text-brand-gold inline-flex items-center gap-2 transition-colors duration-300 self-start sm:self-auto"
+          >
+            <span>{t.news.viewAll}</span>
+            <ArrowUpRight
+              size={16}
+              className="transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300"
+            />
+          </Link>
         </div>
 
         {/* Grid List */}
@@ -124,17 +112,11 @@ const NewsSection: React.FC = () => {
               {/* Content */}
               <div className="p-6 flex-1 flex flex-col justify-between text-left">
                 <div>
-                  <div className="flex items-center justify-between text-xs font-semibold text-brand-gold mb-4">
+                  <div className="flex items-center text-xs font-semibold text-brand-gold mb-4">
                     <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-gold/10 px-3 py-1 border border-brand-gold/20">
                       <Calendar size={12} />
                       {item.date}
                     </span>
-                    {item.telegramUrl && (
-                      <span className="inline-flex items-center gap-1 text-[11px] font-medium text-gray-400 group-hover:text-[#2AABEE] transition-colors">
-                        <Send size={11} className="text-[#2AABEE]" />
-                        <span>Telegram</span>
-                      </span>
-                    )}
                   </div>
                   <h3 className="text-lg font-bold text-brand-dark mb-3 line-clamp-2 leading-snug group-hover:text-brand-gold transition-colors duration-300">
                     {item.title}
@@ -144,10 +126,8 @@ const NewsSection: React.FC = () => {
                   </p>
                 </div>
 
-                <a
-                  href={item.telegramUrl || 'https://t.me/qoqon_shahar_2_son_IM'}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to="/news"
                   className="inline-flex items-center text-brand-navy hover:text-brand-gold font-bold text-xs uppercase tracking-wider gap-2 self-start transition-colors duration-300"
                 >
                   <span>{t.news.more}</span>
@@ -155,7 +135,7 @@ const NewsSection: React.FC = () => {
                     size={14}
                     className="transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300"
                   />
-                </a>
+                </Link>
               </div>
             </motion.div>
           ))}

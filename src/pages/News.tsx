@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Calendar, ArrowUpRight, Send, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Calendar, ArrowUpRight, ChevronLeft, ChevronRight, X } from 'lucide-react';
 import { motion, Variants, AnimatePresence } from 'framer-motion';
 import { newsItems as initialNewsItems } from '../data/siteData';
 import { useLanguage } from '../i18n';
@@ -13,11 +13,11 @@ const News: React.FC = () => {
   const { language, t } = useLanguage();
   const topRef = useRef<HTMLDivElement>(null);
   const [currentPage, setCurrentPage] = useState<number>(1);
+  const [selectedNews, setSelectedNews] = useState<NewsItem | null>(null);
   const [items, setItems] = useState<NewsItem[]>(() =>
     initialNewsItems.map((item) => ({
       ...item,
       image: item.image || entranceImg,
-      telegramUrl: 'https://t.me/qoqon_shahar_2_son_IM',
     }))
   );
 
@@ -32,6 +32,18 @@ const News: React.FC = () => {
       isMounted = false;
     };
   }, []);
+
+  // Lock body scroll when modal is open
+  useEffect(() => {
+    if (selectedNews) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [selectedNews]);
 
   const totalPages = Math.max(1, Math.ceil(items.length / ITEMS_PER_PAGE));
 
@@ -68,26 +80,10 @@ const News: React.FC = () => {
   };
 
   const paginationLabels = {
-    uz: {
-      prev: 'Oldingi',
-      next: 'Keyingi',
-      showing: `Sahifa ${currentPage} / ${totalPages} • Jami ${items.length} ta yangilik`,
-    },
-    ru: {
-      prev: 'Назад',
-      next: 'Вперёд',
-      showing: `Страница ${currentPage} из ${totalPages} • Всего ${items.length} новостей`,
-    },
-    en: {
-      prev: 'Previous',
-      next: 'Next',
-      showing: `Page ${currentPage} of ${totalPages} • Total ${items.length} news`,
-    },
-  }[language] || {
-    prev: 'Oldingi',
-    next: 'Keyingi',
-    showing: `Sahifa ${currentPage} / ${totalPages} • Jami ${items.length} ta yangilik`,
-  };
+    uz: { prev: 'Oldingi', next: 'Keyingi', close: 'Yopish' },
+    ru: { prev: 'Назад', next: 'Вперёд', close: 'Закрыть' },
+    en: { prev: 'Previous', next: 'Next', close: 'Close' },
+  }[language] || { prev: 'Oldingi', next: 'Keyingi', close: 'Yopish' };
 
   // Helper to generate page numbers with ellipsis
   const getPageNumbers = () => {
@@ -118,7 +114,7 @@ const News: React.FC = () => {
 
       <div ref={topRef} className="container mx-auto px-4 lg:px-6 relative z-10">
         {/* Title */}
-        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-12 border-b border-gray-100 pb-8 text-left">
+        <div className="mb-12 border-b border-gray-100 pb-8 text-left">
           <div className="space-y-2">
             <div className="text-brand-gold font-bold text-xs uppercase tracking-widest">
               {t.nav.news}
@@ -130,19 +126,9 @@ const News: React.FC = () => {
               {t.newsPage.subtitle}
             </p>
           </div>
-
-          <a
-            href="https://t.me/qoqon_shahar_2_son_IM"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="self-start sm:self-auto inline-flex items-center gap-2 bg-[#2AABEE]/10 hover:bg-[#2AABEE]/20 border border-[#2AABEE]/30 text-brand-navy px-4 py-2.5 rounded-xl font-semibold text-xs transition-all duration-300 shadow-sm group"
-          >
-            <Send size={15} className="text-[#2AABEE] group-hover:scale-110 transition-transform duration-300" />
-            <span>Telegram kanalimizga o'tish</span>
-          </a>
         </div>
 
-        {/* News Grid with page key for smooth transition */}
+        {/* News Grid */}
         <AnimatePresence mode="wait">
           <motion.div
             key={currentPage}
@@ -155,7 +141,8 @@ const News: React.FC = () => {
             {paginatedItems.map((item) => (
               <motion.article
                 key={item.id}
-                className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-premium border border-gray-100/80 flex flex-col h-full transition-all duration-500 hover:border-brand-gold/30 hover:-translate-y-1"
+                onClick={() => setSelectedNews(item)}
+                className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-premium border border-gray-100/80 flex flex-col h-full transition-all duration-500 hover:border-brand-gold/30 hover:-translate-y-1 cursor-pointer"
                 variants={itemVariants}
               >
                 {/* Image with zoom effect */}
@@ -178,17 +165,11 @@ const News: React.FC = () => {
                 {/* Content */}
                 <div className="p-6 flex-1 flex flex-col justify-between text-left">
                   <div>
-                    <div className="flex items-center justify-between text-xs font-semibold text-brand-gold mb-4">
+                    <div className="flex items-center text-xs font-semibold text-brand-gold mb-4">
                       <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-gold/10 px-3 py-1 border border-brand-gold/20">
                         <Calendar size={12} />
                         {item.date}
                       </span>
-                      {item.telegramUrl && (
-                        <span className="inline-flex items-center gap-1 text-[11px] font-medium text-gray-400 group-hover:text-[#2AABEE] transition-colors">
-                          <Send size={11} className="text-[#2AABEE]" />
-                          <span>Telegram</span>
-                        </span>
-                      )}
                     </div>
                     <h2 className="text-lg font-bold text-brand-dark mb-3 line-clamp-2 leading-snug group-hover:text-brand-gold transition-colors duration-300">
                       {item.title}
@@ -198,10 +179,12 @@ const News: React.FC = () => {
                     </p>
                   </div>
 
-                  <a
-                    href={item.telegramUrl || 'https://t.me/qoqon_shahar_2_son_IM'}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setSelectedNews(item);
+                    }}
                     className="inline-flex items-center text-brand-navy hover:text-brand-gold font-bold text-xs uppercase tracking-wider gap-2 self-start transition-colors duration-300"
                   >
                     <span>{t.newsPage.more}</span>
@@ -209,7 +192,7 @@ const News: React.FC = () => {
                       size={14}
                       className="transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300"
                     />
-                  </a>
+                  </button>
                 </div>
               </motion.article>
             ))}
@@ -218,11 +201,7 @@ const News: React.FC = () => {
 
         {/* Pagination Controls */}
         {totalPages > 1 && (
-          <div className="mt-16 flex flex-col items-center gap-4">
-            <div className="text-xs font-medium text-gray-400">
-              {paginationLabels.showing}
-            </div>
-
+          <div className="mt-16 flex justify-center">
             <div className="inline-flex items-center gap-2 p-1.5 bg-white border border-gray-200/80 rounded-2xl shadow-sm">
               {/* Prev Button */}
               <button
@@ -291,6 +270,75 @@ const News: React.FC = () => {
           </div>
         )}
       </div>
+
+      {/* On-Site News Detail Modal */}
+      <AnimatePresence>
+        {selectedNews && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setSelectedNews(null)}
+              className="fixed inset-0 bg-black/60 backdrop-blur-sm"
+            />
+
+            {/* Modal Card */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 20 }}
+              transition={{ duration: 0.2 }}
+              className="relative w-full max-w-2xl bg-white rounded-3xl shadow-2xl overflow-hidden z-10 my-8 max-h-[90vh] flex flex-col text-left"
+            >
+              {/* Close Button */}
+              <button
+                type="button"
+                onClick={() => setSelectedNews(null)}
+                className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-white/80 hover:bg-white text-gray-700 shadow-md flex items-center justify-center backdrop-blur-md transition-all duration-200 hover:scale-105"
+                aria-label={paginationLabels.close}
+              >
+                <X size={20} />
+              </button>
+
+              {/* Image banner */}
+              {selectedNews.image && (
+                <div className="w-full h-64 sm:h-80 overflow-hidden relative bg-gray-100 flex-shrink-0">
+                  <img
+                    src={selectedNews.image}
+                    alt={selectedNews.title}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      if (target.src !== entranceImg) {
+                        target.src = entranceImg;
+                      }
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+                </div>
+              )}
+
+              {/* Body */}
+              <div className="p-6 sm:p-8 overflow-y-auto space-y-4">
+                <div className="inline-flex items-center gap-1.5 rounded-full bg-brand-gold/10 px-3 py-1 border border-brand-gold/20 text-xs font-semibold text-brand-gold">
+                  <Calendar size={13} />
+                  <span>{selectedNews.date}</span>
+                </div>
+
+                <h2 className="text-xl sm:text-2xl font-extrabold text-brand-dark leading-snug">
+                  {selectedNews.title}
+                </h2>
+
+                <div className="text-gray-700 text-sm sm:text-base leading-relaxed whitespace-pre-line space-y-3 pt-2">
+                  {selectedNews.fullText || selectedNews.excerpt}
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </main>
   );
 };

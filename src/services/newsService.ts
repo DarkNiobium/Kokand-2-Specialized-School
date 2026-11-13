@@ -6,6 +6,7 @@ export interface NewsItem {
   title: string;
   date: string;
   excerpt: string;
+  fullText?: string;
   image: string;
   telegramUrl?: string;
 }
@@ -29,6 +30,7 @@ export async function fetchSchoolNews(): Promise<NewsItem[]> {
         title: item.title,
         date: item.date,
         excerpt: item.excerpt,
+        fullText: item.fullText || item.excerpt,
         image: item.image || entranceImg,
         telegramUrl: item.telegramUrl,
       }));
@@ -42,7 +44,7 @@ export async function fetchSchoolNews(): Promise<NewsItem[]> {
   // Graceful fallback to static data
   return fallbackNewsItems.map((item) => ({
     ...item,
+    fullText: item.excerpt,
     image: item.image || entranceImg,
-    telegramUrl: 'https://t.me/qoqon_shahar_2_son_IM',
   }));
 }
