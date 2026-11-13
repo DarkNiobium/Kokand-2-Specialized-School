@@ -60,11 +60,6 @@ const Hero = () => {
           initial="hidden"
           animate="visible"
         >
-          <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-gold/20 border border-brand-gold/30 text-brand-gold font-bold text-xs tracking-wider uppercase backdrop-blur-md">
-            <span className="w-1.5 h-1.5 rounded-full bg-brand-gold animate-pulse" />
-            Qoqon 2-PIIMA School
-          </motion.div>
-          
           <motion.h1 
             variants={itemVariants} 
             className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.1] text-wrap balance text-white"
