@@ -41,6 +41,10 @@
     {
       "source": "/chsb/(.*)",
       "destination": "/chsb/index.html"
+    },
+    {
+      "source": "/((?!api/|chsb).*)",
+      "destination": "/index.html"
     }
   ]
 }
