@@ -22,7 +22,7 @@ export const Maintenance: React.FC = () => {
           </div>
           <div>
             <h2 className="text-sm font-bold text-brand-dark tracking-wider uppercase">
-              Qo'qon shahar 2-son
+              Qöqon şahar 2-son
             </h2>
             <p className="text-[11px] font-semibold text-brand-gold tracking-widest uppercase mt-0.5">
               Ixtisoslashtirilgan Maktab
@@ -76,7 +76,7 @@ export const Maintenance: React.FC = () => {
 
         {/* Footer info */}
         <p className="text-[10px] text-gray-400 mt-10">
-          &copy; {new Date().getFullYear()} Qo'qon shahar 2-son ixtisoslashtirilgan maktabi.
+          &copy; {new Date().getFullYear()} Qöqon şahar 2-son ixtisoslaştirilgan maktabi.
         </p>
 
       </div>

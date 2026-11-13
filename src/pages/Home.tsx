@@ -21,8 +21,8 @@ const Home = () => {
     <main>
       <SEO 
         title={t.nav.home}
-        description="Ixtisoslashtirilgan ta’lim muassasalari agentligi tizimidagi Qo'qon shahar 2-son ixtisoslashtirilgan maktabining rasmiy veb-sayti. Sifatli ta'lim va zamonaviy infratuzilma."
-        keywords="Qoqon 2-PIIMA, Qo'qon ixtisoslashtirilgan maktab, presidential schools uzbekistan, piima, maktab, ta'lim"
+        description="Ixtisoslaştirilgan taʼlim muassasalari agentligi tizimidagi Qöqon şahar 2-son ixtisoslaştirilgan maktabining rasmiy veb-sayti. Sifatli taʼlim va zamonaviy infratuzilma."
+        keywords="Qöqon 2-PIIMA, Qöqon ixtisoslaştirilgan maktab, presidential schools uzbekistan, piima, maktab, taʼlim"
       />
       
       <Hero />

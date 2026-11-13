@@ -31,7 +31,7 @@ const Teachers = () => {
 
       <SEO 
         title={t.teachersPage.title}
-        description="Qo'qon shahar 2-son ixtisoslashtirilgan maktabi o'qituvchilari, ularning fanlari va malakalari ro'yxati."
+        description="Qöqon şahar 2-son ixtisoslaştirilgan maktabi öqituvçilari, ularning fanlari va malakalari röyxati."
       />
 
       <div className="container mx-auto px-4 lg:px-6 relative z-10">

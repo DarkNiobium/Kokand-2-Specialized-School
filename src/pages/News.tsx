@@ -109,7 +109,7 @@ const News: React.FC = () => {
 
       <SEO
         title={t.newsPage.title}
-        description="Qo'qon shahar 2-son ixtisoslashtirilgan maktabi yangiliklari, e'lonlari va tadbirlari."
+        description="Qöqon şahar 2-son ixtisoslaştirilgan maktabi yangiliklari, eʼlonlari va tadbirlari."
       />
 
       <div ref={topRef} className="container mx-auto px-4 lg:px-6 relative z-10">

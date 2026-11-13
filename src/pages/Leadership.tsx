@@ -34,7 +34,7 @@ const Leadership = () => {
 
       <SEO 
         title={t.leadership.pageTitle}
-        description="Qo'qon shahar 2-son ixtisoslashtirilgan maktabining boshqaruv jamoasi va rahbariyati haqida ma'lumot."
+        description="Qöqon şahar 2-son ixtisoslaştirilgan maktabining boşqaruv jamoasi va rahbariyati haqida maʼlumot."
       />
 
       <div className="container mx-auto px-4 lg:px-6 relative z-10">

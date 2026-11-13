@@ -14,14 +14,14 @@ interface SEOProps {
 export const SEO: React.FC<SEOProps> = ({
   title,
   description,
-  keywords = "Qoqon 2-PIIMA, Qo'qon ixtisoslashtirilgan maktab, presidential schools uzbekistan, piima, maktab, ta'lim, Kokand presidential school",
+  keywords = "Qöqon 2-PIIMA, Qöqon ixtisoslaştirilgan maktab, presidential schools uzbekistan, piima, maktab, taʼlim, Kokand presidential school",
   ogType = 'website',
   ogImage = '/src/assets/school%20pictures/logo.jpg',
-  canonicalUrl = 'https://qoqon2.piima.uz',
+  canonicalUrl = 'https://kokand2piima.uz',
 }) => {
   const { language } = useLanguage();
 
-  const fullTitle = `${title} | Qo'qon shahar 2-son ixtisoslashtirilgan maktab`;
+  const fullTitle = `${title} | Qöqon şahar 2-son ixtisoslaştirilgan maktab`;
 
   return (
     <Helmet>

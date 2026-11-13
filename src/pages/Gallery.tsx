@@ -35,7 +35,7 @@ const Gallery = () => {
 
       <SEO 
         title={t.gallery.title}
-        description="Qo'qon shahar 2-son ixtisoslashtirilgan maktabining hayoti, tadbirlari va dars jarayonlaridan foto-galereya."
+        description="Qöqon şahar 2-son ixtisoslaştirilgan maktabining hayoti, tadbirlari va dars jarayonlaridan foto-galereya."
       />
 
       <div className="container mx-auto px-4 lg:px-6 relative z-10">

@@ -37,7 +37,7 @@ const Contact = () => {
 
       <SEO 
         title={t.contact.title}
-        description="Qo'qon shahar 2-son ixtisoslashtirilgan maktabi bilan bog'lanish ma'lumotlari: telefon, manzil, email va Google xarita."
+        description="Qöqon şahar 2-son ixtisoslaştirilgan maktabi bilan boğlaniş maʼlumotlari: telefon, manzil, email va Google xarita."
       />
 
       <div className="container mx-auto px-4 lg:px-6 relative z-10">

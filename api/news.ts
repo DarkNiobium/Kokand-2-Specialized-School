@@ -98,7 +98,7 @@ export async function getTelegramNews(maxPages = 10): Promise<NewsItem[]> {
       contentLines.push(...lines.slice(1));
     }
     if (!title) {
-      title = "Qo'qon shahar 2-son ixtisoslashtirilgan maktabi yangiligi";
+      title = "Qöqon şahar 2-son ixtisoslaştirilgan maktabi yangiligi";
     }
 
     const excerpt =

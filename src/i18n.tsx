@@ -6,133 +6,133 @@ const translations = {
   uz: {
     languageLabel: 'UZ',
     nav: {
-      agency: "Ixtisoslashtirilgan ta'lim muassasalari agentligi",
-      school: "Qo'qon shahar 2-son ixtisoslashtirilgan maktab",
-      home: "Bosh sahifa",
-      leadership: "Ma'muriyat",
-      teachers: "O'qituvchilar",
+      agency: "Ixtisoslaştirilgan taʼlim muassasalari agentligi",
+      school: "Qöqon şahar 2-son ixtisoslaştirilgan maktab",
+      home: "Boş sahifa",
+      leadership: "Maʼmuriyat",
+      teachers: "Öqituvçilar",
       news: "Yangiliklar",
       gallery: "Galereya",
       contact: "Aloqa"
     },
     hero: {
-      titleTop: "Ixtisoslashtirilgan ta’lim muassasalari agentligi tizimidagi",
-      titleBottom: "Qo'qon shahar 2-son ixtisoslashtirilgan maktab",
-      subtitle: "Sifatli ta'lim va professional o'qituvchilar bilan bolalaringizning kelajagini yarating",
+      titleTop: "Ixtisoslaştirilgan taʼlim muassasalari agentligi tizimidagi",
+      titleBottom: "Qöqon şahar 2-son ixtisoslaştirilgan maktab",
+      subtitle: "Sifatli taʼlim va professional öqituvçilar bilan bolalaringizning kelajagini yarating",
       primaryAction: "Batafsil",
-      secondaryAction: "Portfolio yuklash",
+      secondaryAction: "Portfolio yuklaş",
       features: [
-        { title: "Kuchli akademik baza", text: "Maqsadli tayyorgarlik" },
+        { title: "Kuçli akademik baza", text: "Maqsadli tayyorgarlik" },
         { title: "Raqamli sinflar", text: "Zamonaviy infratuzilma" },
         { title: "Xavfsiz muhit", text: "Tartib va nazorat" }
       ]
     },
     about: {
       title: "Maktab haqida",
-      text: "Ixtisoslashtirilgan ta’lim muassasalari agentligi tizimidagi Qo'qon 2-ixtisoslashtirilgan maktab",
+      text: "Ixtisoslaştirilgan taʼlim muassasalari agentligi tizimidagi Qöqon 2-ixtisoslaştirilgan maktab",
       imageAlt: "Maktab"
     },
     stats: {
-      students: "O'quvchilar",
-      teachers: "O'qituvchilar",
+      students: "Öquvçilar",
+      teachers: "Öqituvçilar",
       achievements: "Yutuqlar"
     },
     news: {
-      title: "So'nggi yangiliklar",
-      subtitle: "Yangiliklar va e'lonlar bilan doimiy xabardor bo'ling",
-      viewAll: "Barchasini ko'rish",
+      title: "Sönggi yangiliklar",
+      subtitle: "Yangiliklar va eʼlonlar bilan doimiy xabardor böling",
+      viewAll: "Barçasini köriş",
       more: "Batafsil"
     },
     leadership: {
       title: "Rahbariyat",
-      subtitle: "Maktab boshqaruv jamoasi bilan tanishing",
-      viewAll: "Barchasi",
+      subtitle: "Maktab boşqaruv jamoasi bilan tanişing",
+      viewAll: "Barçasi",
       pageTitle: "Rahbarlar"
     },
     faq: {
-      title: "Eng ko'p so'raladigan savollar",
-      supportTitle: "Qo'shimcha yordam kerakmi?",
-      supportText: "Agar savolingiz ro‘yxatda bo‘lmasa, biz bilan bog‘laning.",
-      call: "Qo'ng'iroq qilish",
-      email: "Email yuborish",
+      title: "Eng köp söraladigan savollar",
+      supportTitle: "Qöşimça yordam kerakmi?",
+      supportText: "Agar savolingiz röyxatda bölmasa, biz bilan boğlaning.",
+      call: "Qöngʻiroq qiliş",
+      email: "Email yuboriş",
       items: [
         {
-          question: "Maktabga qabul qilish jarayoni qanday amalga oshiriladi?",
-          answer: "Qabul imtihon asosida amalga oshiriladi. Ro‘yxatga olish iyun oyida, imtihonlar esa iyul oyida o‘tkaziladi."
+          question: "Maktabga qabul qiliş jarayoni qanday amalga oşiriladi?",
+          answer: "Qabul imtihon asosida amalga oşiriladi. Röyxatga oliş iyun oyida, imtihonlar esa iyul oyida ötkaziladi."
         },
         {
-          question: "Maktabda qanday qo‘shimcha darslar mavjud?",
-          answer: "Sport, musiqa, san’at, robototexnika, shaxmat va fan to‘garaklari mavjud. Barcha to‘garaklar bepul."
+          question: "Maktabda qanday qöşimça darslar mavjud?",
+          answer: "Sport, musiqa, sanʼat, robototexnika, şaxmat va fan tögaraklari mavjud. Barça tögaraklar bepul."
         },
         {
           question: "Maktab soatlari qanday?",
-          answer: "Darslar dushanbadan jumagacha 8:30 dan 16:00 gacha bo‘lib o‘tadi."
+          answer: "Darslar duşanbadan jumagaça 8:30 dan 16:00 gaça bölib ötadi."
         },
         {
-          question: "Ota-onalar uchun uchrashuvlar qachon bo‘ladi?",
-          answer: "Ota-onalar bilan uchrashuvlar reja asosida oyda bir marta va zaruratga ko‘ra o‘tkaziladi."
+          question: "Ota-onalar uçun uçraşuvlar qaçon böladi?",
+          answer: "Ota-onalar bilan uçraşuvlar reja asosida oyda bir marta va zaruratga köra ötkaziladi."
         },
         {
-          question: "Maktabda ovqatlanish xizmati bormi?",
-          answer: "Ha, o‘quvchilar uchun ovqatlanish xizmati yo‘lga qo‘yilgan."
+          question: "Maktabda ovqatlaniş xizmati bormi?",
+          answer: "Ha, öquvçilar uçun ovqatlaniş xizmati yölga qöyilgan."
         },
         {
-          question: "Maktabda xavfsizlik choralari qanday?",
-          answer: "Maktab hududi nazorat ostida, kirish-chiqish tizimi va videokuzatuv mavjud."
+          question: "Maktabda xavfsizlik çoralari qanday?",
+          answer: "Maktab hududi nazorat ostida, kiriş-çiqiş tizimi va videokuzatuv mavjud."
         },
         {
           question: "Transport xizmati mavjudmi?",
-          answer: "Transport xizmati mavjudligi bo‘yicha ma’lumotlarni maktab ma’muriyatidan olish mumkin."
+          answer: "Transport xizmati mavjudligi böyiça maʼlumotlarni maktab maʼmuriyatidan oliş mumkin."
         },
         {
           question: "Maktabda internet va kompyuter darslari bormi?",
-          answer: "Ha, informatika va IT yo‘nalishidagi darslar muntazam o‘tiladi."
+          answer: "Ha, informatika va IT yönalişidagi darslar muntazam ötiladi."
         }
       ]
     },
     contact: {
       title: "Aloqa",
-      subtitle: "Savollar va hamkorlik uchun biz bilan bog'laning",
-      infoTitle: "Aloqa ma'lumotlari",
-      importantTitle: "Muhim ma'lumotlar",
+      subtitle: "Savollar va hamkorlik uçun biz bilan boğlaning",
+      infoTitle: "Aloqa maʼlumotlari",
+      importantTitle: "Muhim maʼlumotlar",
       phone: "Telefon",
       email: "Email",
       address: "Manzil",
-      addressValue: "Oʻzbekiston Respublikasi, Fargʻona viloyati, Qoʻqon shahri",
+      addressValue: "Özbekiston Respublikasi, Farğona viloyati, Qöqon şahari",
       mapTitle: "Xarita",
       faqItems: [
-        "Maktab davlat tasarrufida hisoblanadi. Maktabga oʻqish mutlaqo bepul.",
-        "Aniq fanlar yoʻnalishiga 4-sinfni bitirib 5-sinfga oʻtayotgan oʻquvchilar imtihon asosida qabul qilinadi.",
-        "Tabiiy fanlar yoʻnalishiga 6-sinf bitirib 7-sinfga oʻtayotgan oʻquvchilar imtihon asosida qabul qilinadi.",
-        "Aniq fanlar yoʻnalishi uchun fanlar majmuasi: Matematika va Ingliz tili.",
-        "Tabiiy fanlar yoʻnalishi uchun fanlar majmuasi: Biologiya va Ingliz tili.",
-        "Imtihonlar har yili Iyul oyida oʻtkaziladi.",
-        "Imtihonlarga roʻyxatga olish Iyun oyida boʻlib oʻtadi.",
-        "Maktabda darslar Dushanbadan Jumagacha. Soat 8:30 dan 16:00 gacha boʻlib oʻtadi.",
-        "Maktabda har xil fan toʻgaraklari tashkil etilgan. Fan toʻgaraklari ham mutlaqo bepul."
+        "Maktab davlat tasarrufida hisoblanadi. Maktabga öqiş mutlaqo bepul.",
+        "Aniq fanlar yönalişiga 4-sinfni bitirib 5-sinfga ötayotgan öquvçilar imtihon asosida qabul qilinadi.",
+        "Tabiiy fanlar yönalişiga 6-sinf bitirib 7-sinfga ötayotgan öquvçilar imtihon asosida qabul qilinadi.",
+        "Aniq fanlar yönalişi uçun fanlar majmuasi: Matematika va Ingliz tili.",
+        "Tabiiy fanlar yönalişi uçun fanlar majmuasi: Biologiya va Ingliz tili.",
+        "Imtihonlar har yili Iyul oyida ötkaziladi.",
+        "Imtihonlarga röyxatga oliş Iyun oyida bölib ötadi.",
+        "Maktabda darslar Duşanbadan Jumagaça. Soat 8:30 dan 16:00 gaça bölib ötadi.",
+        "Maktabda har xil fan tögaraklari taşkil etilgan. Fan tögaraklari ham mutlaqo bepul."
       ]
     },
     teachersPage: {
-      title: "O'qituvchilar",
+      title: "Öqituvçilar",
       searchPlaceholder: "Ism yoki fan",
-      allSubjects: "Hammasi"
+      allSubjects: "Barçasi"
     },
     newsPage: {
       title: "Yangiliklar",
-      subtitle: "So'nggi e'lonlar",
+      subtitle: "Sönggi eʼlonlar",
       more: "Batafsil"
     },
     gallery: {
       title: "Galereya",
-      imageAlt: "Galereya rasm",
+      imageAlt: "Galereya rasmi",
       more: "Yangi suratlar tez orada."
     },
     footer: {
-      brand: "Qo'qon 2-IM",
-      description: "Ixtisoslashtirilgan taʼlim muassasalari agentligi tizimidagi Qo'qon shahar 2-ixtisoslashtirilgan maktab. Sifatli ta'lim - porloq kelajak garovidir.",
+      brand: "Qöqon 2-IM",
+      description: "Ixtisoslaştirilgan taʼlim muassasalari agentligi tizimidagi Qöqon şahar 2-ixtisoslaştirilgan maktab. Sifatli taʼlim — porloq kelajak garovidir.",
       linksTitle: "Foydali havolalar",
-      contactTitle: "Bog'lanish",
-      rights: "Qo'qon 2-ixtisoslashtirilgan maktab. Barcha huquqlar himoyalangan."
+      contactTitle: "Boğlaniş",
+      rights: "Qöqon 2-ixtisoslaştirilgan maktab. Barça huquqlar himoyalangan."
     }
   },
   en: {
